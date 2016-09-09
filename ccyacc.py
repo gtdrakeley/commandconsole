@@ -48,14 +48,14 @@ def p_key_seq(p):
             | key_seq key_decl
     '''
     if len(p) == 2:
-        p[0] = [p[3]]
+        p[0] = [p[1]]
     else:
         p[1].append(p[2])
         p[0] = p[1]
 
 def p_key_decl(p):
-    'key_decl : KEY "[" KEYVAL "]"'
-    p[0] = p[3]
+    'key_decl : KEY KEYVAL'
+    p[0] = p[2]
 
 
 def p_error(p):

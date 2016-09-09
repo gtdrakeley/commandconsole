@@ -1,9 +1,6 @@
 import ply.lex as lex
 
 
-literals = ['[', ']']
-
-
 #  define list of tokens
 tokens = [
         'COMMAND',
